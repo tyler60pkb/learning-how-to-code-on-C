@@ -4,7 +4,7 @@ int main () {
     int units_takenS1, units_takenS2;
     double penalty_blocksS1, penalty_blocksS2;
     double tuition_per_unit = 5534;
-    double penalty_fee_per_12_units = 1000; //every 12 units is +1000 to tuition fee
+    double penalty_fee_per_12_units = 1000;
     double total_fee, total_fee_1st_semester, total_fee_2nd_semester;
 
     printf("Enter the number of units you will be taking on your first semester:");
@@ -16,13 +16,13 @@ int main () {
     total_fee_2nd_semester = units_takenS2 * tuition_per_unit;
 
     
-    penalty_blocksS1 = units_takenS1 / 12; //penalty blocks is how many times the penalty fee will be multiplied
-    penalty_blocksS2 = units_takenS2 / 12;//since every 12 units is a penalty block, its divided by 12
+    penalty_blocksS1 = units_takenS1 / 12;
+    penalty_blocksS2 = units_takenS2 / 12;
 
 
-    total_fee_1st_semester += penalty_blocksS1 * penalty_fee_per_12_units;//then the amount of penalty blocks
+    total_fee_1st_semester += penalty_blocksS1 * penalty_fee_per_12_units;
     printf("\n1st sem calculation: (%lf * %d) + (%lf * %lf)\n", tuition_per_unit, units_takenS1, penalty_blocksS1, penalty_fee_per_12_units);
-    total_fee_2nd_semester += penalty_blocksS2 * penalty_fee_per_12_units;//is multiplied to the penalty fee
+    total_fee_2nd_semester += penalty_blocksS2 * penalty_fee_per_12_units;
     printf("\n2nd sem calculation: (%lf * %d) + (%lf * %lf)\n", tuition_per_unit, units_takenS2, penalty_blocksS2, penalty_fee_per_12_units);
 
     total_fee = total_fee_1st_semester + total_fee_2nd_semester; 
