@@ -17,11 +17,11 @@ if(number < 1000 || number > 9999) {
     return 1;
 }
 
-first_digit = number / 1000; //to get the first digit
-second_digit = (number / 100) % 10; //to get the second digit
-third_digit = (number / 10) % 10; //to get the third digit
-fourth_digit = (number % 10); //to get the fourth digit
-sum = first_digit + second_digit + third_digit + fourth_digit; //to sum up all the numbers
+first_digit = number / 1000;
+second_digit = (number / 100) % 10;
+third_digit = (number / 10) % 10;
+fourth_digit = (number % 10);
+sum = first_digit + second_digit + third_digit + fourth_digit;
 printf("\nFINAL BREAKDOWN AND ANSWER\n");
 printf("\nsum = %d + %d + %d + %d = %d\n", first_digit, second_digit, third_digit, fourth_digit, sum);
 printf("\nThe sum of all the digits in %d is %d\n", number, sum);
