@@ -1,0 +1,24 @@
+#include <stdio.h>
+int main () {
+    char letter;
+    
+    printf("enter a letter:\n");
+    scanf("%c", &letter);   
+
+    if(letter >= 'a' && letter <= 'z') {
+        printf("the letter %c is a lowercase letter.\n", letter);
+        letter = letter - 32; //use this to convert to uppercase as the next command wont work without it
+    }   //this conversion also allows you not to include the lower case in the if(letter == 'a') section.
+    else if(letter >= 'A' && letter <= 'Z') { //else if lets you check another condition after the first if
+        printf("the letter %c is an uppercase letter.\n", letter); //this full command checks if it is uppercase
+    }                                                              //or not
+
+    if(letter == 'A' || letter == 'E' || letter == 'I' || letter == 'O' || letter == 'U') {//check if the letter is
+        printf("the letter %c is a vowel.\n", letter);//a vowel or consonant
+    }
+    else {
+        printf("the letter %c is a consonant.\n", letter);
+    }
+
+return 0;
+}
